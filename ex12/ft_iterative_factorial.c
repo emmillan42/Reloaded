@@ -6,14 +6,14 @@
 /*   By: emmmilla <emmmilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/22 12:13:23 by emmmilla          #+#    #+#             */
-/*   Updated: 2025/11/19 17:18:39 by emmmilla         ###   ########.fr       */
+/*   Updated: 2026/05/26 13:50:12 by emmmilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //Iterative function that returns the factorial of the parameter number
 int	ft_iterative_factorial(int nb)
 {
-	int	 fact;
+	int	fact;
 
 	fact = 1;
 	if (nb < 0)
