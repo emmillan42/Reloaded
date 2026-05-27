@@ -6,41 +6,32 @@
 /*   By: emmmilla <emmmilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 15:51:58 by emmmilla          #+#    #+#             */
-/*   Updated: 2026/05/27 16:45:45 by emmmilla         ###   ########.fr       */
+/*   Updated: 2026/05/27 19:14:08 by emmmilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <fcntl.h>
 #include <unistd.h>
 
-#define BUFFER_SIZE 4096
-
-int	ft_display_file(char *file_name)
+int	ft_show_file(char *file_name)
 {
 	int		file;
 	int		reading;
-	char	buffer[BUFFER_SIZE];
+	char	buffer[1024];
 
 	file = open(file_name, O_RDONLY);
 	if (file == -1)
 		return (0);
-	reading = read(file, buffer, BUFFER_SIZE);
+	reading = read(file, buffer, 1024);
 	while (reading > 0)
 	{
 		if (write(1, buffer, reading) == -1)
-		{
-			close(file);
 			return (0);
-		}
-		reading = read(file, buffer, BUFFER_SIZE);
+		reading = read(file, buffer, 1024);
 	}
 	if (reading == -1)
-	{
-		close(file);
 		return (0);
-	}
-	if (close(file) == -1)
-		return (0);
+	close(file);
 	return (1);
 }
 
@@ -56,7 +47,7 @@ int	main(int argc, char **argv)
 		write(2, "Too many arguments.\n", 21);
 		return (1);
 	}
-	if (!ft_display_file(argv[1]))
+	if (!ft_show_file(argv[1]))
 	{
 		write(2, "Cannot read file.\n", 18);
 		return (1);
