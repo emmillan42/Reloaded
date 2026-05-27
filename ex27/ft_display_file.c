@@ -35,6 +35,37 @@ int	ft_show_file(char *file_name)
 	return (1);
 }
 
+/*#define BUFFER_SIZE 4096
+
+int	ft_show_file(char *file_name)
+{
+	int		file;
+	int		reading;
+	char	buffer[BUFFER_SIZE];
+
+	file = open(file_name, O_RDONLY);
+	if (file == -1)
+		return (0);
+	reading = read(file, buffer, BUFFER_SIZE);
+	while (reading > 0)
+	{
+		if (write(1, buffer, reading) == -1)
+		{
+			close(file);
+			return (0);
+		}
+		reading = read(file, buffer, BUFFER_SIZE);
+	}
+	if (reading == -1)
+	{
+		close(file);
+		return (0);
+	}
+	if (close(file) == -1)
+		return (0);
+	return (1);
+}*/
+
 int	main(int argc, char **argv)
 {
 	if (argc < 2)
