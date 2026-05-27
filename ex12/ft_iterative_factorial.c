@@ -6,7 +6,7 @@
 /*   By: emmmilla <emmmilla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/22 12:13:23 by emmmilla          #+#    #+#             */
-/*   Updated: 2026/05/26 13:50:12 by emmmilla         ###   ########.fr       */
+/*   Updated: 2026/05/27 18:51:51 by emmmilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_iterative_factorial(int nb)
 	int	fact;
 
 	fact = 1;
-	if (nb < 0)
+	if (nb < 0 || nb > 12)
 		return (0);
 	else
 	{
@@ -37,7 +37,7 @@ int	main(void)
 	int	n;
 
 	n = -2;
-	while (n <= 13)
+	while (n <= 15)
 	{
 		printf("The %d! is: %d\n", n, ft_iterative_factorial(n));
 		n++;
