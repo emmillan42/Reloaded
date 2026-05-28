@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emmmilla <emmmilla@student.42.fr>          +#+  +:+       +#+        */
+/*   By: evmillan <evmillan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/22 10:24:45 by emmmilla          #+#    #+#             */
-/*   Updated: 2026/05/23 17:34:25 by emmmilla         ###   ########.fr       */
+/*   Updated: 2026/05/28 23:37:42 by evmillan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ void	ft_print_alphabet(void)
 	}
 }
 
-/*//Testing the function
+/* //Testing the function
 int	main(void)
 {
 	ft_print_alphabet();
 	return (0);
-}*/
+} */
